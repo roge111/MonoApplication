@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+</head>
+<body>
+    <h1>3дравствуйте, {{request.bitrix_user.first_name}} {{request.bitrix_user.last_name}} {{request.bitrix_user.id}}</h1>
+    
+    <!-- Кнопка как ссылка -->
+    <a href="{% url 'table_transaction' %}" class="button">
+        <button type="button">Перейти к таблице сделок</button>
+    </a>
+
+    <a href="{% url 'add_transaction' %}" class="button">
+        <button type="button">Добавить сделку</button>
+    </a>
+</body>
+</html>
